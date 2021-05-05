@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+/* Reseteo del formato previo, para poder tener un mejor control posterior*/
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /*para que todos los elementos hereden el modelo alternativo de cajas*/
+  border: 0;
+  vertical-align: baseline;
+}
+
+html {
+  font-family: Alegreya, "Open Sans", sans-serif;
+  color: rgb(23, 23, 23);
+  font-size: 10px;
+  box-sizing: border-box; /* para obligar al navegador que use el modelo de cajas alternativo donde, al ancho y al alto de la caja NO hay que sumar padding, margin, border*/
+}
+
+header,
+footer {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+/* --------------------------------------------------------*/
+/* --------------------------------------------------------*/
