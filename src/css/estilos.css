@@ -4,7 +4,7 @@
 *, *:before, *:after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; /*para que todos los elementos hereden el modelo alternativo de cajas*/
+  box-sizing: border-box; 
   border: 0;
   vertical-align: baseline;
 }
@@ -16,13 +16,318 @@ html {
   box-sizing: border-box; /* para obligar al navegador que use el modelo de cajas alternativo donde, al ancho y al alto de la caja NO hay que sumar padding, margin, border*/
 }
 
-header,
-footer {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
+header {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-family: "Open sans";
   font-size: 1.6rem;
   width: 100%;
 }
 
+main {
+  font-family: Alagreya;
+  font-size: 1.6rem;
+}
+
+nav {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "a a a "
+    "b c d";
+    margin-bottom: 8rem;
+}
+nav {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav a {
+  color:rgba(0,0,0,1)
+}
+nav a:hover {
+  color:rgba(189, 55, 0,1);
+}
+nav a:active {
+  color:rgba(189, 55, 0,1);
+  text-decoration: 3px solid ;
+}
+
+a {font-weight: 700;
+  text-decoration: none;
+}
+
+h1{
+  font-size: 7rem;
+}
+h2{
+  font-size: 3rem;
+}
+h3{
+  font-size: 3rem;
+}
+h4{
+  font-size: 2rem;
+}
+.opc1 {
+  grid-area: a;
+  align-self: center;
+
+}
+.opc2 {
+  grid-area: b;
+  align-self: center;
+
+}
+.opc3 {
+  grid-area: c;
+  align-self: center;
+
+}
+.opc4 {
+  grid-area: d;
+  align-self: center;
+
+}
+
+@media screen and (max-width: 625px) {
+  nav {
+    display: grid;
+    grid-template-rows: repeat(auto, 1fr);
+    grid-gap: 1rem;
+    justify-self: center;
+  }
+  
+  .itemNav {
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+#containerHomeSuperior{
+  display: grid;
+  grid-template-columns: 20% 40% 20% 20%;
+  background-color: rgb(0, 0, 0);
+  color:rgb(255, 255, 255);
+}
+
+#containerHomeSuperior #izdo {
+ padding-top: 3rem;
+
+}
+#containerHomeSuperior #izdo h1{
+  padding-bottom: 2rem;
+}
+
+#containerHomeSuperior #izdo h2{
+  font-style: italic;
+}
+#containerHomeSuperior #dcho img{
+  width: 80%;
+}
+
+#containerHomeMedio {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#containerHomeMedio {
+  margin-top:3rem;
+  margin-bottom:3rem;
+}
+
+#containerHomeInferior {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#containerHomeInferior h3, p {
+  padding: 1rem;
+}
+#containerHomeInferior h3 {
+  color: rgb(189, 55, 0);
+}
+#containerHomeInferior {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas:
+  "a b c"
+  "d e f"
+  "g h i";
+}
+#img1 {
+  grid-area: a;
+  background-color: rgba(0,0,0,0.1);
+  padding-bottom: 15rem;
+}
+#img1 img { 
+  width: 100%;
+  height: 80%;
+}
+#img2 {
+  grid-area: b;
+  padding-bottom: 15rem;
+}
+#img2 img { 
+  width: 100%;
+  height: 80%;
+}
+#img3 {
+  grid-area: c;
+  background-color: rgba(0,0,0,0.1);
+  padding-bottom: 15rem;
+}
+#img3 img { 
+  width: 100%;
+  height: 80%;
+}
+#img4 {
+  grid-area: d;
+  padding-bottom: 15rem;
+}
+#img4 img { 
+  width: 100%;
+  height: 80%;
+}
+#img5 {
+  grid-area: e;
+  background-color: rgba(0,0,0,0.1);
+  padding-bottom: 15rem;
+}
+#img5 img { 
+  width: 100%;
+  height: 80%;
+}
+#img6 {
+  grid-area: f;
+  padding-bottom: 15rem;
+}
+#img6 img { 
+  width: 100%;
+  height: 80%;
+}
+#img7 {
+  grid-area: g;
+  background-color: rgba(0,0,0,0.1);
+  padding-bottom: 15rem;
+}
+#img7 img { 
+  width: 100%;
+  height: 80%;
+}
+#img8 {
+  grid-area: h;
+  padding-bottom: 15rem;
+}
+#img8 img { 
+  width: 100%;
+  height: 80%;
+}
+#img9 {
+  grid-area: i;
+  background-color: rgba(0,0,0,0.1);
+  padding-bottom: 15rem;
+}
+#img9 img { 
+  width: 100%;
+  height: 80%;
+}
+
+footer {
+  display: grid;
+  grid-template-rows: 100% 100% 100% 100% 100% 100% 100% ;
+  grid-gap:1rem;
+  grid-template-areas:
+  "a"
+  "b"
+  "c"
+  "d"
+  "e"
+  "f"
+  "g"
+  "h"
+  ;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 1.6rem;
+  width: 100%;
+  margin-top:8rem;
+}
+
+#footer1{
+  grid-area: a;
+  text-align: center;
+  padding-top:2rem;
+}
+#footer2{
+  grid-area: b;
+  text-align: center;
+}
+#footer3{
+  grid-area: c;
+  text-align: center;
+}
+#footer4{
+  grid-area: d;
+  text-align: center;
+}
+#footer5{
+  grid-area: e;
+  text-align: center;
+}
+#footer6{
+  grid-area: f;
+  text-align: center;
+}
+#footer7{
+  grid-area: g;
+  text-align: center;
+}
+#footer8{
+  grid-area: h;
+  text-align: center;
+  padding-bottom:8rem;
+}
+
+
+.utopiaMarciana:before {
+  content: "2021 \00A9 ";
+}
+
 /* --------------------------------------------------------*/
+/* -------------------marte en el cine-------------------------------------*/
+#marteEnElCine{
+  width:60%;
+  margin-left: auto;
+  margin-right:auto;
+}
+#marteEnElCineWrapper{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+figure.video-fluid {
+  position: relative;
+  display: block;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+iframe.video-fluid-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-fluid::before {
+  display: block;
+  content: "";
+  padding-top: 56.25%;
+}
 /* --------------------------------------------------------*/
