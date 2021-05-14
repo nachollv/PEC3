@@ -36,12 +36,21 @@ nav {
     "a a a "
     "b c d";
     margin-bottom: 8rem;
-}
-nav {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (max-width: 625px) { 
+  nav {
+    grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d";
+    text-align: center;
+  }
+}
+
 nav a {
   color:rgba(0,0,0,1)
 }
@@ -52,9 +61,27 @@ nav a:active {
   color:rgba(189, 55, 0,1);
   text-decoration: 3px solid ;
 }
+cite {
+  font-style: normal;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+.currentOption {
+  font-weight: bolder;
+  text-decoration: underline;
+}
 
 a {font-weight: 700;
   text-decoration: none;
+}
+
+article {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1{
@@ -127,20 +154,10 @@ h4{
 }
 
 #containerHomeMedio {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-}
-#containerHomeMedio {
   margin-top:3rem;
   margin-bottom:3rem;
 }
 
-#containerHomeInferior {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-}
 #containerHomeInferior h3, p {
   padding: 1rem;
 }
@@ -157,7 +174,7 @@ h4{
 }
 #img1 {
   grid-area: a;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.1);  /*Probar con  #two  li:nth-of-type(odd) { background: lightsteelblue; }*/
   padding-bottom: 15rem;
 }
 #img1 img { 
@@ -289,19 +306,90 @@ footer {
   padding-bottom:8rem;
 }
 
-
 .utopiaMarciana:before {
   content: "2021 \00A9 ";
 }
-
-/* --------------------------------------------------------*/
-/* -------------------marte en el cine-------------------------------------*/
-#marteEnElCine{
+/* -----------------------------------------------------------------*/
+/* -------------------mars 2020-------------------------------------*/
+#mars2020{
   width:60%;
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
+  display:grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "menu texto";
 }
-#marteEnElCineWrapper{
+
+@media screen and (max-width: 625px) {
+  #mars2020{
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "texto"    
+    "menu";
+  }
+}
+
+#menuLateralMars2020{
+grid-area:menu;
+}
+
+#contenidoMars2020{
+  grid-area:texto;
+
+}
+
+#mars2020 div h4{
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+.sinDecoracion {
+  list-style-type: none;
+}
+
+#objeTivosMisionUl {
+  list-style-type: square;
+  padding-left: 3rem;
+}
+
+/* ------------------------------------------------------------------*/
+/* -------------------ciencia ficción--------------------------------*/
+#cienciaFiccion {
+  width:60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+dl {
+  display: grid;
+  grid-template-areas: 
+  'pelicula descripcion foto';
+  grid-gap: 1rem;
+
+}
+
+.titulo {
+  background-color: rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+.descripcion {
+  background-color: rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+.director::before {
+  content: "\07FA";
+  color:rgba(189, 55, 0, 1);
+  font-weight: 700;
+}
+.fotografia {
+  width: 40%;
+}
+/* ------------------------------------------------------------------*/
+/* -------------------marte en el cine-------------------------------*/
+#marteEnElCine {
+  width:60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#marteEnElCineWrapper {
   display:grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -330,4 +418,5 @@ iframe.video-fluid-item {
   content: "";
   padding-top: 56.25%;
 }
-/* --------------------------------------------------------*/
+
+/* ------------------------------------------------------------------*/
