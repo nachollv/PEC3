@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
 /* Reseteo del formato previo, para poder tener un mejor control posterior*/
 *, *:before, *:after {
@@ -12,7 +12,7 @@
 html {
   font-family: Alegreya, "Open Sans", sans-serif;
   color: rgb(23, 23, 23);
-  font-size: 10px;
+  font-size: 400;
   box-sizing: border-box; /* para obligar al navegador que use el modelo de cajas alternativo donde, al ancho y al alto de la caja NO hay que sumar padding, margin, border*/
 }
 
@@ -25,23 +25,29 @@ header {
 }
 
 main {
-  font-family: Alagreya;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 nav {
   display: grid;
+  grid-template-columns: auto;
   grid-gap: 1rem;
   grid-template-areas:
-    "a a a "
+    "a a a"
     "b c d";
     margin-bottom: 8rem;
-  width: 60%;
+  width: 65%;
   margin-left: auto;
   margin-right: auto;
 }
+nav a {
+  color:rgba(0,0,0,1);
+  font-weight: 700;
+  /*font-size: 3rem;*/
+}
 @media screen and (max-width: 625px) { 
   nav {
+    grid-gap: 0rem;
     grid-template-areas:
     "a"
     "b"
@@ -49,10 +55,9 @@ nav {
     "d";
     text-align: center;
   }
-}
-
-nav a {
-  color:rgba(0,0,0,1)
+  nav a {
+    font-size: 1.25rem;;
+  }
 }
 nav a:hover {
   color:rgba(189, 55, 0,1);
@@ -64,28 +69,42 @@ nav a:active {
 cite {
   font-style: normal;
 }
-
 abbr {
   text-decoration: none;
 }
-
 .currentOption {
-  font-weight: bolder;
-  text-decoration: underline;
+  text-decoration: underline solid rgb(0, 0, 0) 3px;
 }
-
-a {font-weight: 700;
+a {
   text-decoration: none;
+}
+p {
+  font-size: 1.5rem;
+  /*line-height: 2.0rem;*/
+}
+#containerHomeInferior a:visited {
+  color:rgba(189, 55, 0,1);
 }
 
 article {
-  width: 80%;
+  width: 65%;
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (max-width: 625px) { 
+  article {
+    width: 90%;
+  }
+}
 
 h1{
-  font-size: 7rem;
+  font-size: 4rem;
+  margin: 2rem 0rem;
+}
+@media screen and (max-width: 625px) { 
+  p {
+    font-size: 1.4rem;
+  }
 }
 h2{
   font-size: 3rem;
@@ -117,29 +136,14 @@ h4{
 
 }
 
-@media screen and (max-width: 625px) {
-  nav {
-    display: grid;
-    grid-template-rows: repeat(auto, 1fr);
-    grid-gap: 1rem;
-    justify-self: center;
-  }
-  
-  .itemNav {
-    align-self: center;
-    justify-self: center;
-  }
-}
-
 #containerHomeSuperior{
   display: grid;
   grid-template-columns: 20% 40% 20% 20%;
   background-color: rgb(0, 0, 0);
   color:rgb(255, 255, 255);
 }
-
 #containerHomeSuperior #izdo {
- padding-top: 3rem;
+ /*padding-top: 3rem;*/
 
 }
 #containerHomeSuperior #izdo h1{
@@ -152,14 +156,56 @@ h4{
 #containerHomeSuperior #dcho img{
   width: 80%;
 }
+@media screen and (max-width: 625px) { 
+  #containerHomeSuperior{
+    grid-template-columns: 100%;
+    padding: 1rem;
+    position: relative;
+    z-index:-1;
+    height: 30rem;
+  }
+  #containerHomeSuperior #izdo h1{
+    font-size: 3rem;
+  }
+  #containerHomeSuperior #izdo h2{
+    font-size: 2rem;
+    font-weight: normal;
+  }
+  #containerHomeSuperior #dcho img{
+    width: 50%;
+    position: absolute;
+    left: 19rem;
+    bottom: 6rem;
+    z-index:-1;
+  }
+}
 
 #containerHomeMedio {
   margin-top:3rem;
   margin-bottom:3rem;
 }
+@media screen and (max-width: 625px) {
+  #containerHomeMedio h3{ 
+    margin-bottom: 1rem;
+  }
+  #containerHomeMedio h4{ 
+    font-weight: normal;
+  }
+ }
 
-#containerHomeInferior h3, p {
+#containerHomeInferior h3 {
   padding: 1rem;
+}
+#containerHomeInferior p {
+  padding: 1rem;
+}
+@media screen and (max-width: 625px) { 
+  #containerHomeInferior h3 {
+    padding: 1rem 0rem;
+  }
+  #containerHomeInferior p {
+    padding: 1rem 0rem;
+  }
 }
 #containerHomeInferior h3 {
   color: rgb(189, 55, 0);
@@ -172,87 +218,103 @@ h4{
   "d e f"
   "g h i";
 }
+@media screen and (max-width: 625px) {
+  #containerHomeInferior {
+    grid-template-columns: auto;
+    grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "e"
+    "f"
+    "g"
+    "h"
+    "i";
+  }
+}
+
+#containerHomeInferior div:nth-child(odd){
+  background-color: rgba(0,0,0,0.1);
+}
+#containerHomeInferior div{
+  padding-bottom: 15rem;
+}
+@media screen and (max-width: 625px) {
+  #containerHomeInferior div:nth-child(odd){
+    background-color: rgba(255,255,255,1);
+  }
+  #containerHomeInferior div{
+    padding-bottom: 4rem;
+  }
+}
+
 #img1 {
   grid-area: a;
-  background-color: rgba(0,0,0,0.1);  /*Probar con  #two  li:nth-of-type(odd) { background: lightsteelblue; }*/
-  padding-bottom: 15rem;
 }
 #img1 img { 
   width: 100%;
-  height: 80%;
+  height: auto;
 }
 #img2 {
   grid-area: b;
-  padding-bottom: 15rem;
 }
 #img2 img { 
   width: 100%;
-  height: 80%;
+  height: auto;
 }
 #img3 {
   grid-area: c;
-  background-color: rgba(0,0,0,0.1);
-  padding-bottom: 15rem;
 }
 #img3 img { 
   width: 100%;
-  height: 80%;
+  height: auto;
 }
 #img4 {
   grid-area: d;
-  padding-bottom: 15rem;
 }
 #img4 img { 
   width: 100%;
-  height: 80%;
+  height: auto;
 }
 #img5 {
   grid-area: e;
-  background-color: rgba(0,0,0,0.1);
-  padding-bottom: 15rem;
 }
 #img5 img { 
   width: 100%;
-  height: 80%;
+  height: auto;
 }
 #img6 {
   grid-area: f;
-  padding-bottom: 15rem;
 }
 #img6 img { 
   width: 100%;
-  height: 80%;
+  height: auto;
 }
 #img7 {
   grid-area: g;
-  background-color: rgba(0,0,0,0.1);
-  padding-bottom: 15rem;
 }
 #img7 img { 
   width: 100%;
-  height: 80%;
+  height: auto;
 }
 #img8 {
   grid-area: h;
-  padding-bottom: 15rem;
 }
 #img8 img { 
   width: 100%;
-  height: 80%;
+  height: auto;
 }
 #img9 {
   grid-area: i;
-  background-color: rgba(0,0,0,0.1);
-  padding-bottom: 15rem;
 }
 #img9 img { 
   width: 100%;
-  height: 80%;
+  height: auto;
 }
 
 footer {
   display: grid;
-  grid-template-rows: 100% 100% 100% 100% 100% 100% 100% ;
   grid-gap:1rem;
   grid-template-areas:
   "a"
@@ -263,19 +325,50 @@ footer {
   "f"
   "g"
   "h"
+
   ;
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   font-size: 1.6rem;
+  font-family: 'Open Sans';
   width: 100%;
   margin-top:8rem;
+}
+
+@media screen and (max-width: 625px) {
+  footer {
+    grid-gap: 0rem;
+  } 
+}
+
+footer a {
+  color:rgb(255, 255, 255);
+  font-weight: normal;
+}
+
+footer input[type="checkbox"] {
+  margin-right: 1rem;
+}
+
+footer button {
+  padding: 1rem;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+footer button:hover {
+  cursor: pointer ;
+}
+footer input[type="checkbox"]:hover {
+  cursor: pointer ;
 }
 
 #footer1{
   grid-area: a;
   text-align: center;
-  padding-top:2rem;
+  padding-top:5rem;
 }
+
 #footer2{
   grid-area: b;
   text-align: center;
@@ -283,38 +376,95 @@ footer {
 #footer3{
   grid-area: c;
   text-align: center;
+  padding-top: 4rem;
+  font-size: 3rem;
 }
+@media screen and (max-width: 625px) {
+  #footer3{
+    font-size: 1.5rem;
+  } 
+ }
+ #footer3 span {
+   font-style: italic;
+ }
 #footer4{
   grid-area: d;
   text-align: center;
 }
+#footer4 input {
+  border-bottom:2px solid rgba(255, 255, 255, 1);
+  padding: 3rem;
+  text-align:center;
+  background-color: #000;
+  color:rgba(255, 255, 255, 1);
+  width:28%;
+  font-size: 4rem;
+}
+@media screen and (max-width: 625px) {
+  #footer4 input {
+    padding: 2rem;
+    width:90%;
+    font-size: 2rem;
+  }  
+}
 #footer5{
   grid-area: e;
   text-align: center;
+  font-size: 2rem;
+}
+@media screen and (max-width: 625px) {
+  #footer5 {
+    font-size: 1.5rem;
+  }  
 }
 #footer6{
   grid-area: f;
   text-align: center;
+  padding-top: 4rem;
+}
+#footer6 a {
+  margin: 2rem;
+  font-size:2rem;
+}
+@media screen and (max-width: 625px) {
+  #footer6 {
+    font-size: 1.25rem;
+    padding-top: 3rem;
+  }
+  #footer6 a {
+    margin: 1rem;
+    font-size: 1.25rem;
+  }  
 }
 #footer7{
   grid-area: g;
   text-align: center;
+  padding-top: 4rem;
+}
+@media screen and (max-width: 625px) {
+  #footer7{
+    font-size: 1rem;
+  }
 }
 #footer8{
   grid-area: h;
   text-align: center;
-  padding-bottom:8rem;
+  padding-bottom:4rem;
 }
-
+@media screen and (max-width: 625px) {
+  #footer8 {
+    font-size: 1rem;
+  }
+}
 .utopiaMarciana:before {
   content: "2021 \00A9 ";
 }
 /* -----------------------------------------------------------------*/
 /* -------------------mars 2020-------------------------------------*/
 #mars2020{
-  width:60%;
+ /* width:60%;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto;*/
   display:grid;
   grid-template-columns: 20% 80%;
   grid-template-areas: "menu texto";
@@ -322,24 +472,54 @@ footer {
 
 @media screen and (max-width: 625px) {
   #mars2020{
+    /*width:90%;*/
     grid-template-columns: 100%;
     grid-template-areas: 
     "texto"    
     "menu";
+    font-size: 1rem;
   }
+}
+
+#mars2020 ul li a {
+  color:  rgb(189, 55, 0);
+
+}
+
+#mars2020 ul li a:hover {
+  color:  rgb(0, 0, 0);
 }
 
 #menuLateralMars2020{
 grid-area:menu;
+font-family: 'Open sans';
+font-size: 1rem;
 }
+
+#menuLateralMars2020 h4{
+  font-size: 1rem;
+}
+
+#menuLateralMars2020 li:nth-last-child(1) { 
+  font-weight: 800;
+ }
+
+ #menuLateralMars2020 li:nth-last-child(1) a{
+   color:rgba(0,0,0,1);
+ }
 
 #contenidoMars2020{
   grid-area:texto;
 
 }
 
+#mars2020 h2{
+  margin:1rem 0rem 1rem 0rem;
+}
+
 #mars2020 div h4{
-  padding-top: 3rem;
+  font-weight: 400;
+  padding-top: 2rem;
   padding-bottom: 2rem;
 }
 .sinDecoracion {
@@ -348,51 +528,31 @@ grid-area:menu;
 
 #objeTivosMisionUl {
   list-style-type: square;
-  padding-left: 3rem;
+  margin:3rem 0rem 3rem 3rem;
+}
+@media screen and (max-width: 625px) { 
+  #objeTivosMisionUl {
+    margin: 2rem 0rem 2rem 2rem;
+    font-size: 1.4rem;
+    line-height: 2.0rem;
+  } 
 }
 
-/* ------------------------------------------------------------------*/
-/* -------------------ciencia ficción--------------------------------*/
-#cienciaFiccion {
-  width:60%;
-  margin-left: auto;
-  margin-right: auto;
-}
-dl {
-  display: grid;
-  grid-template-areas: 
-  'pelicula descripcion foto';
-  grid-gap: 1rem;
-
+.centrado {
+  text-align: center;
 }
 
-.titulo {
-  background-color: rgba(0,0,0,0.1);
-  padding: 1rem;
+.pie_imagen {
+  text-align: center;
+  font-size: 1rem;
 }
-.descripcion {
-  background-color: rgba(0,0,0,0.1);
-  padding: 1rem;
-}
-.director::before {
-  content: "\07FA";
-  color:rgba(189, 55, 0, 1);
-  font-weight: 700;
-}
-.fotografia {
+
+.videoIframe {
+  border: #fff none 0px;
   width: 100%;
+  height: 450px;
 }
-/* ------------------------------------------------------------------*/
-/* -------------------marte en el cine-------------------------------*/
-#marteEnElCine {
-  width:60%;
-  margin-left: auto;
-  margin-right: auto;
-}
-#marteEnElCineWrapper {
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-}
+
 figure.video-fluid {
   position: relative;
   display: block;
@@ -419,4 +579,126 @@ iframe.video-fluid-item {
   padding-top: 56.25%;
 }
 
+/* ------------------------------------------------------------------*/
+/* -------------------ciencia ficción--------------------------------*/
+
+@media screen and (max-width: 625px) { 
+  #cienciaFiccion {
+    width:90%;
+
+  } 
+}
+#wrapperCienciaFiccion {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-gap: 2rem;
+
+}
+@media screen and (max-width: 625px) { 
+  #wrapperCienciaFiccion {
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "titulo"
+    "descripcion"
+    "fotografia";
+    grid-gap: 0rem;
+  } 
+}
+.titulo {
+  background-color: rgba(0,0,0,0.1);
+  font-weight: 700;
+  font-size: 5rem;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+@media screen and (max-width: 625px) {  
+  .titulo {
+    font-size: 4rem;
+  } 
+}
+.descripcion {
+  background-color: rgba(0,0,0,0.1);
+  padding: 1.5rem 1rem;
+  font-style: italic;
+}
+.director::before {
+  content: "\07FA ";
+  color:rgba(189, 55, 0, 1);
+  font-weight: 700;
+}
+.fotografia {
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 625px) { 
+  .fotografia {
+    margin-bottom: 1rem;
+  }
+}
+/* ------------------------------------------------------------------*/
+/* -------------------marte en el cine-------------------------------*/
+
+#marteEnElCineWrapper {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  grid-template-areas:
+  "a b"
+  "c d"
+  "e f"
+  "g h" 
+  "i j"
+  "k l";
+  background-color: rgba(189, 55, 0, 1);
+}
+#video1 {
+  grid-area: a;
+}
+#figcaption1 {
+  position: absolute;
+  bottom : -2rem;
+  border:rgb(255, 255, 255) solid 1px;
+  color:rgb(255, 255, 255);
+  grid-area: b;
+}
+@media screen and (max-width: 625px) { 
+  #marteEnElCine {
+    width:100%;
+  }
+  #marteEnElCineWrapper {
+  grid-template-columns: auto;
+  grid-template-areas:
+  "a"
+  "b"
+  "c" 
+  "d"
+  "e" 
+  "f"
+  "g" 
+  "h" 
+  "i" 
+  "j"
+  "k" 
+  "l";
+  color:rgba(255, 255, 255, 1);
+  text-align: center;
+  }
+}
+
+figure.video-fluid {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  overflow: hidden;
+}
+figure.video-fluid div {
+  margin-bottom: 2rem;
+}
+
+figcaption {
+  position:sticky;
+}
 /* ------------------------------------------------------------------*/
