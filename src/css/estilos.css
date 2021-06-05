@@ -101,11 +101,6 @@ h1{
   font-size: 4rem;
   margin: 2rem 0rem;
 }
-@media screen and (max-width: 625px) { 
-  p {
-    font-size: 1.4rem;
-  }
-}
 h2{
   font-size: 3rem;
 }
@@ -114,6 +109,23 @@ h3{
 }
 h4{
   font-size: 2rem;
+}
+@media screen and (max-width: 625px) { 
+  p {
+    font-size: 1.4rem;
+  }
+  h1{
+
+  }
+  h2{
+
+  }
+  h3{
+    font-size: 2.5rem;
+  }
+  h4{
+
+  } 
 }
 .opc1 {
   grid-area: a;
@@ -607,13 +619,13 @@ iframe.video-fluid-item {
 .titulo {
   background-color: rgba(0,0,0,0.1);
   font-weight: 700;
-  font-size: 5rem;
+  font-size: 4rem;
   padding: 1rem;
-  margin-top: 2rem;
 }
 @media screen and (max-width: 625px) {  
   .titulo {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    margin-top: 2rem;
   } 
 }
 .descripcion {
@@ -625,6 +637,12 @@ iframe.video-fluid-item {
   content: "\07FA ";
   color:rgba(189, 55, 0, 1);
   font-weight: 700;
+}
+@media screen and (max-width: 625px) { 
+  .director {
+    font-weight: 700;
+    font-size: 2rem;
+  }
 }
 .fotografia {
   height: 100%;
@@ -640,32 +658,119 @@ iframe.video-fluid-item {
 
 #marteEnElCineWrapper {
   display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
+  grid-template-columns: 50% 50%;
+
+  grid-column-gap: 2rem;
   grid-template-areas:
-  "a b"
-  "c d"
-  "e f"
-  "g h" 
-  "i j"
-  "k l";
-  background-color: rgba(189, 55, 0, 1);
+  "a c"
+  "b d"
+  "e g"
+  "f h" 
+  "i k"
+  "j l";
+
 }
-#video1 {
+#marteEnElCineWrapper div:nth-child(even){
+  background-color: rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#a {
   grid-area: a;
 }
-#figcaption1 {
-  position: absolute;
-  bottom : -2rem;
-  border:rgb(255, 255, 255) solid 1px;
-  color:rgb(255, 255, 255);
-  grid-area: b;
+#a iframe{
+  width: 100% !important;
+  height: 100% !important;
 }
+#b {
+  grid-area: b;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+#b span {
+  font-weight: 700;
+}
+#c {
+  grid-area: c;
+}
+#c iframe{
+  width: 100% !important;
+  height: 100% !important;
+}
+#d {
+  grid-area: d;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+#d span {
+  font-weight: 700;
+}
+#e {
+  grid-area: e;
+}
+#e iframe{
+  width: 100% !important;
+  height: 100% !important;
+}
+#f {
+  grid-area: f;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+#f span {
+  font-weight: 700;
+}
+#g {
+  grid-area: g;
+}
+#g iframe{
+  width: 100% !important;
+  height: 100% !important;
+}
+#h {
+  grid-area: h;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+#h span {
+  font-weight: 700;
+}
+#i {
+  grid-area: i;
+}
+#i iframe{
+  width: 100% !important;
+  height: 100% !important;
+}
+#j {
+  grid-area: j;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+#j span {
+  font-weight: 700;
+}
+#k {
+  grid-area: k;
+}
+#k iframe{
+  width: 100% !important;
+  height: 100% !important;
+}
+#l {
+  grid-area: l;
+  margin-bottom: 2rem;
+padding: 1rem;
+}
+#l span {
+  font-weight: 700;
+}
+
 @media screen and (max-width: 625px) { 
   #marteEnElCine {
-    width:100%;
+
   }
-  #marteEnElCineWrapper {
+  #marteEnElCineWrapper{
   grid-template-columns: auto;
   grid-template-areas:
   "a"
@@ -680,7 +785,6 @@ iframe.video-fluid-item {
   "j"
   "k" 
   "l";
-  color:rgba(255, 255, 255, 1);
   text-align: center;
   }
 }
@@ -695,7 +799,7 @@ figure.video-fluid {
   overflow: hidden;
 }
 figure.video-fluid div {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 figcaption {
