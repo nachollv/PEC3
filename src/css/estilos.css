@@ -62,10 +62,7 @@ nav a {
 nav a:hover {
   color:rgba(189, 55, 0,1);
 }
-nav a:active {
-  color:rgba(189, 55, 0,1);
-  text-decoration: 3px solid ;
-}
+
 cite {
   font-style: normal;
 }
@@ -424,6 +421,10 @@ footer input[type="checkbox"]:hover {
   text-align: center;
   font-size: 2rem;
 }
+#footer5 button:hover {
+  background-color: rgb(189, 55, 0);
+  color:  rgb(255, 255, 255);
+}
 @media screen and (max-width: 625px) {
   #footer5 {
     font-size: 1.5rem;
@@ -437,6 +438,9 @@ footer input[type="checkbox"]:hover {
 #footer6 a {
   margin: 2rem;
   font-size:2rem;
+}
+#footer6 a:hover {
+  color:  rgb(189, 55, 0);
 }
 @media screen and (max-width: 625px) {
   #footer6 {
