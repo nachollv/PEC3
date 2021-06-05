@@ -410,7 +410,7 @@ footer input[type="checkbox"]:hover {
   background-color: #000;
   color:rgba(255, 255, 255, 1);
   width:28%;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 @media screen and (max-width: 625px) {
   #footer4 input {
