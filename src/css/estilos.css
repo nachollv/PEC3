@@ -662,114 +662,57 @@ iframe.video-fluid-item {
 
 #marteEnElCineWrapper {
   display:grid;
-  grid-template-columns: 50% 50%;
-
-  grid-column-gap: 2rem;
+  grid-template-columns: auto auto;
+  grid-gap: 2rem;
   grid-template-areas:
-  "a c"
-  "b d"
-  "e g"
-  "f h" 
-  "i k"
-  "j l";
+  "a b"
+  "c d"
+  "e f";
 
 }
-#marteEnElCineWrapper div:nth-child(even){
-  background-color: rgba(0,0,0,0.1);
-  text-align: center;
-}
 
-#a {
+#aa {
   grid-area: a;
+  border:orangered solid 1px;
 }
-#a iframe{
-  width: 100% !important;
-  height: 100% !important;
-}
-#b {
+#bb {
   grid-area: b;
-  margin-bottom: 2rem;
-  padding: 1rem;
+  border:orangered solid 1px;
 }
-#b span {
-  font-weight: 700;
-}
-#c {
+#cc {
   grid-area: c;
+  border:orangered solid 1px;
 }
-#c iframe{
-  width: 100% !important;
-  height: 100% !important;
-}
-#d {
+#dd {
   grid-area: d;
-  margin-bottom: 2rem;
-  padding: 1rem;
+  border:orangered solid 1px;
 }
-#d span {
-  font-weight: 700;
-}
-#e {
+#ee {
   grid-area: e;
+  border:orangered solid 1px;
 }
-#e iframe{
-  width: 100% !important;
-  height: 100% !important;
-}
-#f {
+#ff {
   grid-area: f;
-  margin-bottom: 2rem;
-  padding: 1rem;
-}
-#f span {
-  font-weight: 700;
-}
-#g {
-  grid-area: g;
-}
-#g iframe{
-  width: 100% !important;
-  height: 100% !important;
-}
-#h {
-  grid-area: h;
-  margin-bottom: 2rem;
-  padding: 1rem;
-}
-#h span {
-  font-weight: 700;
-}
-#i {
-  grid-area: i;
-}
-#i iframe{
-  width: 100% !important;
-  height: 100% !important;
-}
-#j {
-  grid-area: j;
-  margin-bottom: 2rem;
-  padding: 1rem;
-}
-#j span {
-  font-weight: 700;
-}
-#k {
-  grid-area: k;
-}
-#k iframe{
-  width: 100% !important;
-  height: 100% !important;
-}
-#l {
-  grid-area: l;
-  margin-bottom: 2rem;
-padding: 1rem;
-}
-#l span {
-  font-weight: 700;
+  border:orangered solid 1px;
 }
 
+.nested {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-rows: minmax(70px, auto);
+  grid-gap: 1em;
+
+  }
+  .nested > iframe {
+  border: #000 1px solid;
+  width: 100%; 
+  height: 100%;
+  }
+  .nested > figcaption {
+    background-color: rgba(0,0,0,0.1);
+    text-align: center;
+    border: #000 1px solid;
+    }
 @media screen and (max-width: 625px) { 
   #marteEnElCine {
 
